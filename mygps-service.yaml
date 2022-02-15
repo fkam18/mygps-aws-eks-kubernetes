@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: mygps-service
+  namespace: mygps
+  labels:
+    app: mygps
+spec:
+  selector:
+    app: mygps
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+
